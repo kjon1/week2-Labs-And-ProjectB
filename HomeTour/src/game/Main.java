@@ -28,7 +28,11 @@ public class Main {
 	
 		
 		boolean quit = false;
-		System.out.println("You are inside a tropical treehouse.");
+		System.out.println("You are inside a tropical treehouse. You are in the main living room."
+				+ "\nIt seems you passed out in the treehouse after climing it, due to exertion. "
+				+ "\nThere is a monkey fur rug in the middle of the room, and some coconuts for food."
+				+ "\nSuddenly, you hear angry natives shouting and climbing the treehouse ladder!"
+				+ "\nQuick, time to escape! There are doors to the north, south, and east.");
 
 		
 		while (!quit) {
@@ -37,13 +41,13 @@ public class Main {
 			String[] parsedWords = collectInput();
 			parse(parsedWords, player);
 			printRoom(player);
-			System.out.println(" Choose to go north, south, or east.");
+			//System.out.println(" Choose to go north, south, or east.");
 			input = sc.toString();
 			
 		
 
 		//while (!quit) {
-		System.out.println("Or, you can press 'e' to escape treehouse, or press 't' to stay in treehouse");
+		System.out.println("Press 'e' to escape treehouse!");
 		escape = sc2.toString();
 		sc2.nextLine();
 		switch(menuSelection) {
@@ -96,7 +100,7 @@ public class Main {
 						+ "\nThe bathroom window is ajar. There is a special forces"
 						+ "\nzipline for fast escape.");
 				
-				System.out.println("Press \"ENTER\" to continue.");
+				System.out.println("Press \"ENTER\" to climb out window.");
 				Scanner enterkey = new Scanner(System.in);
 				enterkey.nextLine();
 			
@@ -107,7 +111,7 @@ public class Main {
 						+ "\nThe patio has a view of the jungle and you hear monkeys fighting."
 						+ "\nThere is a hang glider for quick escape from the treehouse.");
 				//player.currentRoom = player.currentRoom.getExitDirection("south");
-				System.out.println("Press \"ENTER\" to continue.");
+				System.out.println("Press \"ENTER\" to ride hang glider.");
 				Scanner enterkey = new Scanner(System.in);
 				enterkey.nextLine();
 				//System.out.println("Press 'e' to escape treehouse, or press \"ENTER\" to stay in treehouse");
